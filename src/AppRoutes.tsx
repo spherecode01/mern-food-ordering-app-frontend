@@ -8,6 +8,9 @@ import ManageRestaurantPage from "./pages/ManageRestaurantPage";
 import SearchPage from "./pages/SearchPage";
 import DetailPage from "./pages/DetailPage";
 import OrderStatusPage from "./pages/OrderStatusPage";
+import CheckoutCancel from "./pages/CheckoutCancel";
+import CheckoutSuccess from "./pages/CheckoutSuccess";
+
 //import { path } from 'path';
 
 const AppRoutes = () => {
@@ -50,6 +53,22 @@ const AppRoutes = () => {
             </Layout>
           }
         />
+         <Route
+          path="/checkout/success"
+          element={
+            <Layout>
+              <CheckoutSuccess />
+            </Layout>
+          }
+        />
+        <Route
+          path="/checkout/cancel"
+          element={
+            <Layout>
+              <CheckoutCancel />
+            </Layout>
+             }
+             />
       </Route>
 
       <Route path="*" element={<Navigate to="/" />} />
